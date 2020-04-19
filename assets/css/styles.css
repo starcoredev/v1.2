@@ -1,0 +1,281 @@
+body, html {
+  height: 100%;
+  width: 100%;
+}
+#map{
+	position:fixed;
+	width:100%;
+	height:100%;
+}
+h1.title{
+	display:table;
+	position:fixed;
+	z-index:9999;
+	margin-top:10px;
+	padding:5px 10px 5px 10px;
+	left: 50%;
+    transform: translateX(-50%);
+	font-size:1.2em;
+	background:#fff;
+	-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+.logo{
+	position:fixed;
+	z-index:9999;
+	
+	right:0;
+	top:0;
+	margin-top:10px;
+	margin-right:10px;
+	text-decoration:none;
+	text-align:right;
+}
+.logo a{
+	text-decoration:none;
+	display:block;
+}
+.logo img{
+	width:70px;
+}
+.logo .logout{
+	padding:0px;
+	padding-bottom:2px;
+	margin-left:2px;
+	margin-right:2px;
+	line-height:1.2em;
+	*width:100%;
+	font-size:0.6em;
+}
+
+.dialog{
+	display:none;
+	position:fixed;
+	right:0;
+	top:0;
+	margin-top:10px;
+	margin-right:10px;
+	z-index:99999;
+	background:rgba(255, 255, 255, 0);
+	
+	width:350px;
+}
+.dialog .dialog-content{
+	display:table;
+	background:#fff;
+	border:1px solid #ccc;
+	-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+.dialog .dialog-content table{
+	width:100%;
+}
+.dialog .dialog-content img{
+	display:block;
+	width:100px;
+	margin:20px;
+}
+.dialog .dialog-content p{
+	line-height:1.2em;
+	text-align:justify;
+	margin-right:10px;
+}
+.dialog .dialog-content a{
+	color:green;
+}
+
+
+
+.leaflet-left{
+	left:0px;
+	transition: .3s all; -webkit-transition: .3s all; -moz-transition: .3s all;
+	-o-transition: .3s all; -ms-transition: .3s all;
+}
+.leaflet-left.open {
+	left:350px;
+	transition: .3s all; -webkit-transition: .3s all; -moz-transition: .3s all;
+	-o-transition: .3s all; -ms-transition: .3s all;
+    *left: 50%;
+    *transform: translate(-50%, 0%);
+}
+
+.mapControl{
+	position:fixed;
+	right:10px;
+	bottom:70px;
+}
+.mapControl ul{
+	list-style:none;
+	padding:0px;
+	margin:0px;
+}
+.mapControl ul li{
+	margin-bottom:2px;
+}
+.mapControl ul li a{
+	display:block;
+	width:25px;
+	height:25px;
+	text-align:center;
+	text-decoration:none;
+	color:#fff;
+	font-size:0.9em;
+	line-height:1.8em;
+	font-weight:normal;
+	background:#333;
+	-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+.mapControl ul li a:hover{
+	background:#000;
+}
+.mapControl ul li.p{
+	margin-bottom:0px;
+}
+.mapControl ul li.p a{
+	-webkit-border-radius: 0px;
+-moz-border-radius: 0px;
+border-radius: 0px;
+
+	-webkit-border-top-left-radius: 5px;
+-webkit-border-top-right-radius: 5px;
+-moz-border-radius-topleft: 5px;
+-moz-border-radius-topright: 5px;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+}
+.mapControl ul li.m a{
+	-webkit-border-radius: 0px;
+-moz-border-radius: 0px;
+border-radius: 0px;
+
+	-webkit-border-bottom-right-radius: 5px;
+-webkit-border-bottom-left-radius: 5px;
+-moz-border-radius-bottomright: 5px;
+-moz-border-radius-bottomleft: 5px;
+border-bottom-right-radius: 5px;
+border-bottom-left-radius: 5px;
+}
+
+
+/* Hide the browser's default checkbox */
+.checkbox{
+	display:inline-block !important;
+	width:32%;
+	text-align:center;
+	font-size:0.8em;
+}
+.checkbox {
+  display: inline-block;
+  position: relative;
+  padding-left: 0px;
+  margin-right:0px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  
+}
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  margin-top:5px;
+  background-color: #ccc;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox:hover input ~ .checkmark {
+  background-color: #aaa;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox input:checked ~ .checkmark {
+  background-color: #337ab7;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox .checkmark:after {
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.checkbox .checkmark{
+	display:none;
+}
+.checkbox img{
+	max-width:40px;
+	margin:0 auto;
+}
+.checkbox img.on {
+  display: none;
+}
+.checkbox img.off {
+  display: block;
+}
+.checkbox.checked img.on {
+  display: block;
+}
+.checkbox.checked img.off {
+  display: none;
+}
+
+
+.flexslider{
+	padding:0px;
+}
+#slider, .flexslider{
+	margin-bottom:0px;
+}
+#carousel li{
+	margin:1px;
+}
+.flexslider div.default{
+	width:100%; height:200px; background:#000; position:relative;
+}
+.flexslider div.default img{
+	position: absolute;
+	width:100px !important; 
+	height:100px !important; 
+    top : 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform    : translate(-50%, -50%);    
+}
+
+
+

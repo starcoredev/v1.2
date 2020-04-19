@@ -1,0 +1,42 @@
+@media(max-width:768px) {
+
+.slideshow{
+	
+}
+.slideshow .carousel .carousel-inner .carousel-caption{
+	
+}
+.slideshow .carousel .carousel-inner .carousel-caption img{
+	max-height:100px;
+}
+.slideshow .carousel .carousel-inner .carousel-caption h5{
+	font-size:1em;
+}
+.slideshow .carousel .carousel-inner .carousel-caption p{
+	font-size:0.8em;
+	letter-spacing:2.5px;
+}
+
+.visimisi h2{
+	font-size:1em;
+}
+.visimisi ol > li{
+	font-size:0.9em;
+}
+
+.program .box > div{
+	height:auto;
+	padding-left:0px;
+	padding-right:0px;
+}
+
+h1.title{
+	font-size:1.5em;
+}
+h1.title hr{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 2px double #007bff;
+}
+
+}

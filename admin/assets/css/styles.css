@@ -1,0 +1,128 @@
+
+
+@import url("main.css?6");
+@import url("header.css?5");
+@import url("../datatables/datatable.css?9");
+
+body{
+	background:#eee;
+}
+
+
+.sidebar{
+	position:fixed !important;
+	height:100%;
+	width:250px;
+	top:0; left:-210px;
+	background:#111;
+	z-index:2000;
+	
+	transition: .3s all; -webkit-transition: .3s all; -moz-transition: .3s all;
+	-o-transition: .3s all; -ms-transition: .3s all;
+}
+.sidebar .scrollbar-macosx > .scroll-element .scroll-bar {
+	background:rgba(255, 255, 255, 0.7);
+	width:3px;
+	margin-left:4px;
+}
+.sidebar .sidebar-bars{
+	background:#000;
+	color:#fff;
+	font-size:1.2em;
+	position:relative;
+	width:100%;
+	top:0;
+	padding:17px;
+	z-index:100;
+}
+.sidebar .sidebar-bars > label{
+	letter-spacing:2px;
+}
+.sidebar .sidebar-bars > a{
+	position:absolute;
+	right:10px;
+	color:#fff;
+	font-size:1.2em;
+	text-decoration:none;
+}
+.sidebar .sidebar-bars > a i.fa-bars{
+	display:block;
+}
+.sidebar .sidebar-bars > a i.fa-long-arrow-left{
+	display:none;
+}
+.sidebar .sidebar-bars > a:hover{
+	background:#15151d;
+}
+
+.sidebar .sidebar-menu{
+	height:100%;
+}
+.sidebar ul{
+	list-style:none;
+	padding:0px; margin:0px;
+	position:relative;
+	margin-bottom: 80px;
+	z-index:5;
+}
+.sidebar ul > li > label{
+	background:#000;
+	display:block;
+	color:#ccc;
+	padding:5px 10px 5px 10px;
+	letter-spacing:3px;
+}
+.sidebar ul > li > a{
+	display:block;
+	padding:10px 10px 10px 10px;
+	color:#fff;
+	text-decoration:none;
+	font-size:1.1em;
+	position:relative;
+}
+.sidebar ul > li > a > i:last-child{
+	position:absolute;
+	right:10px;
+	color:#fff;
+	font-size:1.2em;
+	text-decoration:none;
+	opacity:1;
+	
+	transition: .3s all; -webkit-transition: .3s all; -moz-transition: .3s all;
+	-o-transition: .3s all; -ms-transition: .3s all;
+}
+.sidebar ul > li > a > span{
+	margin-left:20px;
+	letter-spacing:1px;
+}
+.sidebar ul > li > a:hover{
+	background:#000;
+}
+
+
+.sidebar.open{
+	left:0;
+	
+	transition: .3s all; -webkit-transition: .3s all; -moz-transition: .3s all;
+	-o-transition: .3s all; -ms-transition: .3s all;
+}
+.sidebar.open .sidebar-bars > a i.fa-bars{
+	display:none;
+}
+.sidebar.open .sidebar-bars > a i.fa-long-arrow-left{
+	display:block;
+}
+.sidebar.open ul > li > a > i:last-child{
+	opacity:0;
+	
+	transition: .3s all; -webkit-transition: .3s all; -moz-transition: .3s all;
+	-o-transition: .3s all; -ms-transition: .3s all;
+}
+.sidebar.open .scrollbar-macosx > .scroll-element .scroll-bar {
+	margin-left:1px;
+	width:6px;
+}
+
+
+
+

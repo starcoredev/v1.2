@@ -1,0 +1,42 @@
+.fileinput{
+	margin-bottom:10px;
+}
+.fileinput .fileinput-content{
+	background:#eee;
+}
+.fileinput a{
+	text-decoration:none;
+	display:block;
+	position:relative;
+	background:rgba(0, 0, 0, 0);
+}
+.fileinput a:hover{
+	background:rgba(0, 0, 0, 0.7);
+}
+.fileinput a img{
+	display:block;
+	width:100%;
+	min-height:100px;
+}
+.fileinput a label{
+	display:none;
+	position:absolute;
+	top:40%; transform:translateY(-40%);
+	left:40%; transform:translateX(-40%);
+	color:#fff;
+	background:rgba(0, 0, 0, 0.8);
+	padding:5px;
+	cursor:pointer;
+}
+.fileinput a:hover label{
+	display:block;
+}
+.fileinput input{
+	display:none;
+}
+.fileinput button{
+	margin-top:10px;
+	width:100%;
+	background:#333;
+	color:#fff;
+}
