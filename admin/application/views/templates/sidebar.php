@@ -7,8 +7,9 @@
 	<ul>
 		<li><a href="<?php echo base_url(); ?>" title="Dashboard"><i class="fa fa-home"></i><span>Dashboard</span><i class="fa fa-home"></i></a></li>
 		<li><label>Master Data</label></li>
-		<li><a href="<?php echo base_url(); ?>package" title="Client"><i class="fa fa-cube"></i><span>Package</span><i class="fa fa-cube"></i></a></li>
-		<li><a href="<?php echo base_url(); ?>client" title="Client"><i class="fa fa-bank"></i><span>Client</span><i class="fa fa-bank"></i></a></li>
+		<li><a href="<?php echo base_url(); ?>package" title="Category Package"><i class="fa fa-cubes"></i><span>Category Package</span><i class="fa fa-cubes	"></i></a></li>
+		<li><a href="<?php echo base_url(); ?>client" title="Client List"><i class="fa fa-bank"></i><span>Client List</span><i class="fa fa-bank"></i></a></li>
+		<li><a href="<?php echo PUBLICURL; ?>?auth=f" title="Logout"><i class="fa fa-sign-out"></i><span>Logout</span><i class="fa fa-sign-out"></i></a></li>
 	</ul>
 	</div>
 </div>

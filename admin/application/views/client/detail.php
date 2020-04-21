@@ -36,8 +36,8 @@
 	
 	<div class="container" style="margin-top:10px;">
 		<ul class="nav nav-tabs">
-		  <li class="active"><a data-toggle="tab" href="#icon">Data Category</a></li>
-		  <li><a data-toggle="tab" href="#user">Data User</a></li>
+		  <li class="active"><a data-toggle="tab" href="#icon">Category Packages</a></li>
+		  <li><a data-toggle="tab" href="#user">User List</a></li>
 		</ul>
 
 		<div class="tab-content">
@@ -53,7 +53,7 @@
 				<table id="tableIcon" class="table table-striped">
 					<thead>
 						<th>No</th>
-						<th>Tag Name</th>
+						<th>Category</th>
 						<th>Package Name</th>
 						<th>Icon ON</th>
 						<th>Icon OFF</th>
@@ -78,7 +78,7 @@
 						<th>No</th>
 						<th>Username</th>
 						<th>Email</th>
-						<th>Tag Filter</th>
+						<th>Categories</th>
 						<th>Status</th>
 						<th class="action 1"></th>
 					</thead>

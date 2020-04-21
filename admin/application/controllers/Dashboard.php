@@ -12,7 +12,11 @@ class Dashboard extends CI_Controller {
 
 	public function index()
 	{
-		$data = array();
+		$data = array(
+			"clients"=>$this->Modul_Model->read("select count(*) as 'total' from client where status = 1")[0]["total"],
+			"users"=>$this->Modul_Model->read("select count(*) as 'total' from users where status = 1")[0]["total"],
+			"categories"=>$this->Modul_Model->read("select count(*) as 'total' from tags where status = 1")[0]["total"]
+		);
 		$param = array(
 			'title' => $this->my('title'), 
 			'body' => $this->my('bodyPath'), 

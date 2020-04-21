@@ -1,4 +1,6 @@
 <div class="sidebar open">
+	<br />
+	<h3 style="margin:0px; padding-left:10px; font-size:0.9em; font-weight:normal">Selamat Datang <b><?php echo $_SESSION["user"]["username"]; ?></b> dari Client <b><?php echo $_SESSION["user"]["client"]["name"]; ?></b></h3>
 	<a href="javascript:void(0)" onclick="openSidebar()" class="sidebar-control"><i class="fa fa-caret-right"></i><i class="fa fa-caret-left"></i></a>
 	
 	<div class="sidebar-top">
@@ -13,9 +15,8 @@
 		</div>
 		
 	</div>
-	<h3 style="margin:0px; padding-left:10px; font-size:0.9em; font-weight:normal">Selamat Datang <b><?php echo $_SESSION["user"]["username"]; ?></b> dari Client <b><?php echo $_SESSION["user"]["client"]["name"]; ?></b></h3>
 	<div class="scrollbar-macosx sidebar-layers" >
-		<h3>Layers (multiple selections)</h3>
+		<h3>Category Selection</h3>
 		<?php 
 		$n = 0;
 		foreach($tags as $t){

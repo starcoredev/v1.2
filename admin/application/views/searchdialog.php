@@ -2,12 +2,20 @@
 <div class="table-responsive">
 	<table id="table" class="table table-striped">
 		<thead>
+			<?php
+
+			if(count($data) > 0){
+			?>
 			<th>No</th>
 			<?php
-			foreach($data[0] AS $key => $name) {
-					if(!in_array($key, $hidecolumns)){
-						echo '<th>'.strtoupper(str_replace("_", " ", $key)).'</th>';
-					}
+				foreach($data[0] AS $key => $name) {
+						if(!in_array($key, $hidecolumns)){
+							echo '<th>'.strtoupper(str_replace("_", " ", $key)).'</th>';
+						}
+				}
+			}
+			else{
+				echo '<th>Data tidak ditemukan</th>';
 			}
 			?>
 			<th class="action 1"></th>
@@ -17,6 +25,12 @@
 			$n = 0;
 			foreach($data as $d){
 				$n++;
+
+				$cl = " btn-default ";
+				if($d[$selected_column] == $selected_value){
+					$cl = " btn-primary ";
+				}
+
 				echo '<tr>';
 				echo '<input type="hidden" value = "'.$n.'" />';
 				echo '<td>'.$n.'</td>';
@@ -35,7 +49,7 @@
 				else{
 					$x = 'sdradio' . rand(1, 999999);
 					echo '<input id="'.$x.'" name="radio" type="radio" style="display:none" />';
-					echo '<button class="btn btn-primary btn-sm" onclick="$(\'#'.$x.'\').attr(\'checked\', true); dialogPilih()"><i class="fa fa-check" style="margin-right:0px"></i></button>';
+					echo '<button class="btn '.$cl.' btn-sm" onclick="$(\'#'.$x.'\').attr(\'checked\', true); dialogPilih()"><i class="fa fa-edit" style="margin-right:0px"></i>&nbsp;&nbsp;&nbsp;Select</button>';
 				}
 				
 				echo '</td>';
